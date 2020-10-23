@@ -1,0 +1,13 @@
+node_modules
+build
+chrome
+firefox
+edge
+dist
+.vscode
+.atom-build.yml
+scripts/authenticator-build-key.enc
+cert.pfx
+css
+.license-gen-tmp
+view/licenses.html

@@ -1,0 +1,14 @@
+﻿{
+    "extName": {
+        "message": "Blackboard Collaborate Playback Speed",
+        "description": "Extension Name."
+    },
+    "extShortName": {
+        "message": "Bb Collaborate Playback Speed",
+        "description": "Extension Short Name."
+    },
+    "extDesc": {
+        "message": "Adds a playback speed button to Blackboard Collaborate recordings.",
+        "description": "Extension Description."
+    }
+}

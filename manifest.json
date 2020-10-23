@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "__MSG_extName__",
+    "short_name": "__MSG_extShortName__",
+    "version": "1.0.0",
+    "default_locale": "en",
+    "description": "__MSG_extDesc__",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.bbcollab.com/*"],
+            "js": ["dist/content.js"],
+            "all_frames": true
+        }
+    ],
+    "permissions": [],
+    "content_security_policy": "script-src 'self'; font-src 'self'; img-src 'self'; style-src 'self'; object-src 'self';"
+}
