@@ -65,7 +65,9 @@ function createSpeedControlButton(): HTMLDivElement {
   speedControlContainer.id = "speedControlContainer";
   speedControlContainer.classList.add("dropdown-pane");
   speedControlButton.onclick = () =>
-    speedControlContainer.classList.add("is-open");
+    speedControlContainer.classList.contains("is-open")
+      ? speedControlContainer.classList.remove("is-open")
+      : speedControlContainer.classList.add("is-open");
   document.onclick = (e) => {
     const el = document.elementFromPoint(e.x, e.y);
     if (el && el.id !== "speedControlButton") {
