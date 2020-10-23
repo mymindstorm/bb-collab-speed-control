@@ -51,6 +51,7 @@ function createSpeedControlButton(): HTMLDivElement {
     "has-tooltip"
   );
   speedControlButton.innerText = "1x";
+  speedControlButton.id = "speedControlButton";
 
   // Tooltip
   speedControlButton.appendChild(speedControlTooltip);
@@ -61,11 +62,16 @@ function createSpeedControlButton(): HTMLDivElement {
 
   // Popup menu
   speedControlDiv.appendChild(speedControlContainer);
+  speedControlContainer.id = "speedControlContainer";
   speedControlContainer.classList.add("dropdown-pane");
   speedControlButton.onclick = () =>
-    speedControlContainer.classList.contains("is-open")
-      ? speedControlContainer.classList.remove("is-open")
-      : speedControlContainer.classList.add("is-open");
+    speedControlContainer.classList.add("is-open");
+  document.onclick = (e) => {
+    const el = document.elementFromPoint(e.x, e.y);
+    if (el && el.id !== "speedControlButton") {
+      speedControlContainer.classList.remove("is-open");
+    }
+  };
 
   speedControlContainer.style.display = "flex";
   speedControlContainer.style.width = "4.8rem";
