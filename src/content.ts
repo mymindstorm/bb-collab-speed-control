@@ -25,6 +25,19 @@ new MutationObserver((mutations, observer) => {
             menubarElement.querySelector(".fullscreen-toggle")
           );
           console.log("BB Collab Playback: Control button created");
+          if (localStorage.bbSpeed) {
+            const playbackSpeed = Number(localStorage.bbSpeed);
+            videoElement.playbackRate = playbackSpeed;
+            const radio = document.getElementById(
+              `bbCollabSpeedControl-${playbackSpeed}`
+            );
+            if (radio && radio instanceof HTMLInputElement) {
+              radio.checked = true;
+            }
+            if (buttonDivElement.firstChild instanceof HTMLButtonElement) {
+              buttonDivElement.firstChild.innerText = `${playbackSpeed}x`;
+            }
+          }
           observer.disconnect();
         } catch (e) {
           console.error("BB Collab Playback: ", e);
@@ -126,6 +139,7 @@ function speedControlChangeHandler() {
 
   if (videoElement && buttonDivElement && playbackSpeed) {
     videoElement.playbackRate = playbackSpeed;
+    localStorage.bbSpeed = playbackSpeed;
     if (buttonDivElement.firstChild instanceof HTMLButtonElement) {
       buttonDivElement.firstChild.innerText = `${playbackSpeed}x`;
     }
