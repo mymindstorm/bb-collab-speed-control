@@ -1,10 +1,10 @@
 ﻿{
     "extName": {
-        "message": "Blackboard Collaborate Playback Speed",
+        "message": "Playback Speed for Blackboard Collaborate",
         "description": "Extension Name."
     },
     "extShortName": {
-        "message": "Bb Collaborate Playback Speed",
+        "message": "Playback Speed for Bb Collaborate",
         "description": "Extension Short Name."
     },
     "extDesc": {
