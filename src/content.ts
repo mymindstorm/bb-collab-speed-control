@@ -92,8 +92,8 @@ function createSpeedControlButton(): HTMLDivElement {
   speedControlContainer.style.width = "4.8rem";
   speedControlContainer.style.paddingTop = "0.1rem";
   speedControlContainer.style.paddingBottom = "0.1rem";
-  speedControlContainer.style.marginTop = "-197px";
-  speedControlContainer.style.marginLeft = "-41px";
+  speedControlContainer.style.marginTop = "-12rem";
+  speedControlContainer.style.marginLeft = "-2.6rem";
   speedControlContainer.style.flexDirection = "column-reverse";
 
   // Speed radio buttons
